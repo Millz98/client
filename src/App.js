@@ -1,16 +1,16 @@
-import { PrettyChatWindow } from "react-chat-engine-pretty";
+import { useState } from "react";
 
-const ChatsPage = () => {
-  return (
-    <div style={{ height: "100vh" }}>
-    <PrettyChatWindow
-    projectId="ccb4ba82-4356-4209-b5c8-c3d876aea758"
-    username="zack1234"
-    secret="pass1234"
-    style={{ height: "100%" }}
-    />
-    </div>
-   );
-  };
+import AuthPage from "./authPage";
+import ChatsPage from "./chatsPage";
 
-  export default ChatsPage;
+function App() {
+  const [user, setUser] = useState();
+
+  if (!user) {
+    return <AuthPage onAuth={(user) => setUser(user)} />;
+  } else {
+    return <ChatsPage user={user} />;
+  }
+}
+
+export default App;
