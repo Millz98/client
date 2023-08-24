@@ -1,6 +1,6 @@
 import { PrettyChatWindow } from "react-chat-engine-pretty";
 
-const ChatsPage = (props) => {
+const ChatsPage = () => {
   return (
     <PrettyChatWindow
     projectId="ccb4ba82-4356-4209-b5c8-c3d876aea758"
