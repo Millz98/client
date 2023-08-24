@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import { PrettyChatWindow } from "react-chat-engine-pretty";
 
-function App() {
+const ChatsPage = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <PrettyChatWindow
+    projectId="ccb4ba82-4356-4209-b5c8-c3d876aea758"
+    username="zack1234"
+    secret="pass1234"
+    style={{ height: "100vh" }}
+    />
+   );
+  };
 
-export default App;
+  export default ChatsPage;
